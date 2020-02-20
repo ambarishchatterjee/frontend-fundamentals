@@ -1,0 +1,143 @@
+    <!--
+		Task:
+        Let's go back to your recipe (from assignments #1, #2, and #3), and add some styling to it.
+        1. Change the background color of the entire page (choose any color you wish)
+        2. Change the font size of the paragraphs and lists so they are different sizes.
+        3. Add padding below each heading (h1, h2 etc) you've used, to space them out from the content they're above.
+        4. Make the page title (the h1) bold, and make it underlined.
+
+        Extra Credit:
+        1. Find a website that lists out all the various css properties you can use, and note that URL as a comment in your code.
+        2. Using that website as a resource, add a styling property that we haven't covered yet.
+    -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>The Most Amazing Chocolate Cake</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body{
+            background-color: aquamarine;
+            margin: 0;
+            padding: 0;
+        }
+        p{
+            font-size: 20px;
+        }
+        li{
+            font-size: 15px;
+        }
+        h1,h2,h3,h4{
+            padding-bottom: 10px;
+        }
+        h1{
+            font-weight: bold;
+            text-decoration: underline;
+            text-align: center;
+        }
+        header{
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 99;
+            background-color: cadetblue;
+            height: 100px;
+        }
+        header h1{
+            color: beige;
+        }
+        main{
+            margin-top: 120px;
+            padding: 30px;
+        }
+        footer{
+            background-color: cadetblue;
+            width: 100%;
+            padding: 10px 0;
+        }
+        footer p{
+            text-align: center;
+            color: cornsilk;
+        }
+        a{
+            color: firebrick;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!--Recipe name in big heading-->
+        <h1>The Most Amazing Chocolate Cake</h1>
+    </header>
+    <main>
+        <section>
+            <!--paragraph-->
+            <p>The Most Amazing Chocolate Cake is here. Moist, chocolaty perfection. This is the chocolate cake you've been dreaming of!</p>
+            <!--Small heading-->
+                    <h2>Ingredients</h2>
+            <!--Unordered list start-->        
+                    <ul>
+                        <!--List items start-->
+                        <li>butter and flour for coating and dusting the cake pan</li>
+                        <li>3 all-purpose flour</li>
+                        <li>3 granulated sugar</li>
+                        <li>1 1/2 unsweetened cocoa powder</li>
+                        <li>1 tablespoon baking soda</li>
+                        <li>1 1/2  teaspoons  baking powder</li>
+                        <li>1 1/2  teaspoons  salt</li>
+                        <li>4  large eggs</li>
+                        <li>1 1/2 buttermilk</li>
+                        <li>1 1/2 warm water</li>
+                        <li>1/2  cup  vegetable oil</li>
+                        <li>2  teaspoons  vanilla extract</li>
+                        <!--List items end-->
+                    </ul>
+            <!--Unordered list start-->
+        </section>
+        <section>
+            <!--small heading-->
+            <h2>Instructions</h2>
+            <!--Ordered list start-->
+                <ol>
+                    <!--List items start-->
+                    <li>Preheat oven to 350 degrees. Butter three 9-inch cake rounds. Dust with flour and tap out the excess. 🍚</li><!--Added smiley-->
+                    <li>Mix together flour, sugar, cocoa, baking soda, baking powder, and salt in a stand mixer using a low speed until combined. 🍬</li>
+                    <li>Add eggs, buttermilk, warm water, oil, and vanilla. Beat on a medium speed until smooth. This should take just a couple of minutes. ⏰</li>
+                    <li>Divide batter among the three pans. I found that it took just over 3 cups of the batter to divide it evenly. 🥧</li>
+                    <li>Bake for 30-35 minutes until a toothpick inserted into the center comes out clean. 🍪</li>
+                    <li>Cool on wire racks for 15 minutes and then turn out the cakes onto the racks and allow to cool completely. 🍰</li>
+                    <li>Frost with your favorite frosting and enjoy! 🎂</li>
+                    <!--List items end-->
+                </ol>
+            <!--Ordered list end-->
+            <!--last paragraph-->
+            <p>This cake is moist and has the perfect crumb. I cannot imagine making a chocolate cake using any other recipe.</p>
+        </section>
+        <section>
+            <!--Images-->
+            <img src="./images/The-Most-Amazing-Chocolate-Cake.jpg" alt="Chocolate cake">
+            <img src="./images/The-Most-Amazing-Chocolate-Cake2.jpg" alt="chocolate cake">
+        </section>
+        <section>
+            <!--links-->    
+            <h2>Related recipes</h2>
+            <ul>
+                <li><a href="https://www.lifeloveandsugar.com/best-chocolate-cake/" target="_blank">MOIST CHOCOLATE CAKE</a></li>
+                <li><a href="https://www.joyofbaking.com/cakes/SimpleChocolateCake.html" target="_blank">SIMPLE CHOCOLATE CAKE</a></li>
+                <li><a href="https://www.foodnetwork.com/recipes/food-network-kitchen/basic-chocolate-cake-recipe-2120876" target="_blank">BASIC CHOCOLATE CAKE</a></li>
+                <li><a href="https://cafedelites.com/best-fudgy-chocolate-cake/" target="_blank">FUDGY CHOCOLATE CAKE</a></li>
+                <li><a href="https://thestayathomechef.com/the-most-amazing-chocolate-cake/" target="_blank">CLASSIC CHOCOLATE CAKE</a></li>
+            </ul>
+        </section>
+    
+    </main>
+    <footer>
+        <p>
+            &copy; Ambarish - CSS ref <a href="https://www.w3schools.com/css/" target="_blank">w3schools</a>
+        </p>
+    </footer>
+
+</body>
+</html>

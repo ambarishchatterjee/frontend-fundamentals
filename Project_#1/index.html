@@ -1,0 +1,130 @@
+<!--
+    Task: 
+    We didn't cover all the possible HTML tags yet. What are they? And what should they be used for?
+
+    For this project you should:
+    1. Find a resource online that gives you a list of each HTML tag that you can use.
+    2. Pick 5 of those tags (5 that we have not covered so far).
+    3. Create a simple website about your favorite book / story, and include those 5 tags in the HTML. (The page can have any other tags as well, as long as those 5 are included). This can take any form. You can get as complicated or as simple as you wish.
+    4. Add comments to each section of your code, explaining the purpose of that block.
+
+    Extra Credit:
+    For extra credit, use one or more of these tags (if you haven't already):
+    1. <video>
+    2. <audio>
+    3. <form>
+    4. <select>
+    5. <input>
+    6. <base>
+    7. <meta>
+    8. <iframe>
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--new HTML tag 1: meta: used for charecter set and responsive layout-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--new HTML 2: title: title of webpage-->  
+    <title>My Travel Story</title>
+    <!-- importing Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<body>
+  <!--adding page header-->
+    <header>
+      <!--new HTML tag 3: nav: using for navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Gomukh Tapovan Trek</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          <!--adding a section id as href to scroll to that section -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#overview">Overview <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#iternery">Iternery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#gallery">Gallery</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                  </li>
+                  </ul>
+            </div>
+          </nav>   
+    </header>
+    <!--page main content area-->
+    <main>
+      <!--new HTML tag 4: section: used to group site sections site-->
+        <section id="overview" class="container my-2 py-2">
+            <h2>A Trek To True Source Of River Ganga</h2>
+            <p>Gaumukh Tapovan is one of the oldest treks in the country. It is a trek that fascinates trekkers for multiple reasons. However, the biggest one of all is that this trek leads you to the true source of river Ganga – Gaumukh.</p>
+
+            <p>When you are standing in front of the mouth of glacier, you realise how big and magnificent the Gaumukh is. You can observe the glacier calving, along with debris that has layered it over the years. The magnitude of where you are standing – the birthplace of possibly the most important river in our country, a river that is associated both as lifeline and as a part of a religious myth – strikes you. This has a profound effect on all trekkers.</p>
+            <img class="img-fluid" src="./images/Gaumukh-Gangotri-Glacier-Trek-Atul-Rana-Indiahikes-trekker.jpg" alt="">
+        </section>
+        <!--section 2 -->
+        <section id="iternery" class="container my-2 py-2">
+            <h2>Short itinerary</h2>
+            <!--adding an unorderd list-->
+            <ul>
+                <li><b>Day 1:</b> Reach Gangotri; 10-12 hours drive from Dehradun. Transport will be arranged from Dehradun Railway Station at 6.30 am. Cab cost per vehicle will be Rs.7,000 (5-6 seater).</li>
+                <li><b>Day 2:</b> Trek from Gangotri (10,055 ft) to Chirbasa (11,761 ft); 6 hours, 9 km</li>
+                <li><b>Day 3:</b> Chirbasa (11,761 ft) to Bhojbasa (12,450 ft); 3 hours, 5 km.</li>
+                <li><b>Day 4:</b> Acclimatization walk To Gaumukh (13,455 ft) and back to Bhojbasa (12,450 ft)</li>
+                <li><b>Day 5:</b> Bhojbasa (12,450 ft) to Tapovan (14,202 ft) to Kala Pathar; 6 hours, 9 km</li>
+                <li><b>Day 6:</b> Kala Pathar (12,450 ft) to Bhojbasa (10,055 ft) ; 5 hours, 9 km</li>
+                <li><b>Day 7:</b> Bhojbasa (12,450 ft) to Gangotri (10,055 ft) ; 8 hours, 14 km</li>
+                <li><b>Day 8:</b> Drive from Gangotri to Dehradun. Cab cost per vehicle will be Rs.7,000 (5-6 seater). You will reach Dehradun between 6.00 pm and 7.00 pm.</li>
+            </ul>
+            
+        </section>
+        <!--section 3-->
+        <section id="gallery" class="container my-2 py-2">
+          <h2>Video</h2>
+            <div class="embed-responsive embed-responsive-16by9">
+              <!--new HTML tag : 5: iframe: used to call a youtube video-->
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/EZpmceY75E8?rel=0" allowfullscreen></iframe>
+            </div>
+        </section>
+        <!--section 4-->
+        <section id="contact" class="container my-2 py-2">
+          <h2>Contact Us</h2>
+          <!--new HTML tag 6: form: used to create form-->
+            <form>
+              <div class="form-group">
+                <label for="exampleFormControlInput1">Name</label>
+                <!--new HTML tag 7: input: used for form inputs-->
+                <input type="text" class="form-control" placeholder="John Doe">
+              </div>
+              <div class="form-group">
+                  <label for="exampleFormControlInput1">Email address</label>
+                  <input type="email" class="form-control" placeholder="name@example.com">
+                </div>
+                <div class="form-group">
+                  <label for="exampleFormControlSelect2">What communication you prefer?</label>
+                  <select class="form-control">
+                    <option>Phone</option>
+                    <option>Email</option>
+                    <option>F2F</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="exampleFormControlTextarea1">Message</label>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                  <button type="button" class="btn btn-primary">Submit</button>
+                </div>
+              </form>
+        </section>
+    </main>
+
+</body>
+</html>

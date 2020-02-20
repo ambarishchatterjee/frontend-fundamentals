@@ -1,0 +1,263 @@
+    <!--
+		Task:
+        It's time to make your recipe a bit more mobile friendly.
+        1. Using a combination of HTML and CSS changes, modify your recipe site so that it works well on mobile devices of all sizes.
+        2. Within your browser's dev-tools, simulate different screen sizes so that you can check your work.
+
+        Extra Credit:
+        1. Look up the css "media" rule, and learn how to apply special styles to different browser sizes.
+        2. Using one media rule, target all browsers smaller than 400px
+        3. Using another media rule, target all browsers between 401px and 750px;
+        4. Using another media rule, target all browsers larger than 750px.
+        5. Add special styles to each media screen to enhance responsiveness (adjust font sizes, colors, hide and show content, etc). 
+    -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <title>The Most Amazing Chocolate Cake</title>
+    <style>
+        /* body css */
+        #appBody{
+            background-color: aquamarine;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        img{
+            max-width: 100%;
+        }
+        /* p & li font-size */
+        p{
+            font-size: 20px;
+        }
+        li{
+            font-size: 15px;
+        }
+        /* using arrow icon instead bullet */
+        .ingredients li{
+            list-style: none;
+            list-style-type: '→ ';
+        }
+        /* using roman instead numbers */
+        .instructions li{
+            list-style: none;
+            list-style-type: upper-roman;
+        }
+        /* adding padding to headings */
+        h1,h2,h3,h4{
+            padding-bottom: 10px;
+        }
+        /* main header bold and underline */
+        .heading{
+            font-weight: bold;
+            text-decoration: underline;
+            text-align: center;
+        }
+        /* header fixed on top using position */
+        .header{
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 99;
+            background-color: cadetblue;
+            min-height: 100px;
+        }
+        .header h1{
+            color: beige;
+        }
+        .main{
+            margin-top: 120px;
+            padding: 30px;
+        }
+        .footer{
+            background-color: cadetblue;
+            width: 100%;
+            padding: 10px 0;
+        }
+        .footer p{
+            text-align: center;
+            color: cornsilk;
+        }
+        a{
+            color: firebrick;
+        }
+        /* style aded to p span */
+        p > span{
+            color: gold;
+            font-weight: bold;
+            font-style: italic;
+        }
+        p > span:last-child{
+            text-decoration: underline;
+            font-size: 25px;
+        }
+        span.amze{
+            color: red;
+            font-style: normal;
+        }
+        /* responsive design 401px-750px*/
+        @media screen and (max-width: 750px) and (min-width: 401px){
+            #appBody{
+                background-color: beige;
+                color: darkslategray;
+            }
+            .heading{
+                font-size: 20px;
+            }
+            .header{
+                min-height: 50px;
+            }
+            .main{
+                margin-top: 40px;
+                padding: 10px;
+            }
+            h1, h2, h3, h4{
+                margin-bottom: 0;
+                padding-bottom: 0;
+                text-transform: capitalize;
+            }
+            .footer p{
+                font-size: 12px;
+                text-transform: uppercase;
+            }
+            li{
+                font-size: 14px;
+                line-height: 22px;
+            }
+            ul, ol{
+                padding-left: 25px;
+            }
+        }
+        /* responsive under 400px */
+        @media screen and (max-width: 400px){
+            #appBody{
+                background-color: dimgray;
+                color: floralwhite;
+            }
+            .heading{
+                font-size: 18px;
+            }
+            .header{
+                min-height: 50px;
+                background-color: khaki;
+            }
+            .header h1{
+                color: mediumpurple;
+            }
+            .main{
+                margin-top: 40px;
+                padding: 10px;
+            }
+            h1, h2, h3, h4{
+                margin-bottom: 0;
+                padding-bottom: 0;
+                text-transform: capitalize;
+            }
+            .footer p{
+                font-size: 12px;
+                text-transform: uppercase;
+            }
+            li{
+                font-size: 14px;
+                line-height: 22px;
+            }
+            ul, ol{
+                padding-left: 25px;
+            }
+            p{
+                font-size: 16px;
+            }
+            h2{
+                font-size: 18px;
+                text-transform: uppercase;
+            }
+            a{
+                color: khaki;
+            }
+            p > span:last-child{
+                text-decoration: underline;
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body id="appBody">
+    <header class="header">
+        <!--Recipe name in big heading-->
+        <h1 class="heading">The Most Amazing Chocolate Cake</h1>
+    </header>
+    <main class="main">
+        <section>
+            <!--paragraph-->
+            <p>The Most <span class="amze">Amazing</span> Chocolate <span>Cake</span> is here. <span>Moist</span>, chocolaty perfection. This is the chocolate <span>cake</span> you've been dreaming of!</p>
+            <!--Small heading-->
+                    <h2>Ingredients</h2>
+            <!--Unordered list start-->        
+                    <ul class="ingredients">
+                        <!--List items start-->
+                        <li>butter and flour for coating and dusting the cake pan</li>
+                        <li>3 all-purpose flour</li>
+                        <li>3 granulated sugar</li>
+                        <li>1 1/2 unsweetened cocoa powder</li>
+                        <li>1 tablespoon baking soda</li>
+                        <li>1 1/2  teaspoons  baking powder</li>
+                        <li>1 1/2  teaspoons  salt</li>
+                        <li>4  large eggs</li>
+                        <li>1 1/2 buttermilk</li>
+                        <li>1 1/2 warm water</li>
+                        <li>1/2  cup  vegetable oil</li>
+                        <li>2  teaspoons  vanilla extract</li>
+                        <!--List items end-->
+                    </ul>
+            <!--Unordered list start-->
+        </section>
+        <section>
+            <!--small heading-->
+            <h2>Instructions</h2>
+            <!--Ordered list start-->
+                <ol class="instructions">
+                    <!--List items start-->
+                    <li>Preheat oven to 350 degrees. Butter three 9-inch cake rounds. Dust with flour and tap out the excess. 🍚</li><!--Added smiley-->
+                    <li>Mix together flour, sugar, cocoa, baking soda, baking powder, and salt in a stand mixer using a low speed until combined. 🍬</li>
+                    <li>Add eggs, buttermilk, warm water, oil, and vanilla. Beat on a medium speed until smooth. This should take just a couple of minutes. ⏰</li>
+                    <li>Divide batter among the three pans. I found that it took just over 3 cups of the batter to divide it evenly. 🥧</li>
+                    <li>Bake for 30-35 minutes until a toothpick inserted into the center comes out clean. 🍪</li>
+                    <li>Cool on wire racks for 15 minutes and then turn out the cakes onto the racks and allow to cool completely. 🍰</li>
+                    <li>Frost with your favorite frosting and enjoy! 🎂</li>
+                    <!--List items end-->
+                </ol>
+            <!--Ordered list end-->
+            <!--last paragraph-->
+            <p>This cake is moist and has the perfect crumb. I cannot imagine making a chocolate cake using any other recipe.</p>
+        </section>
+        <section>
+            <!--Images-->
+            <div class="images">
+                <img src="./images/The-Most-Amazing-Chocolate-Cake.jpg" alt="Chocolate cake">
+                <img src="./images/The-Most-Amazing-Chocolate-Cake2.jpg" alt="chocolate cake">    
+            </div>
+        </section>
+        <section>
+            <!--links-->    
+            <h2>Related recipes</h2>
+            <ul class="links">
+                <li><a href="https://www.lifeloveandsugar.com/best-chocolate-cake/" target="_blank">MOIST CHOCOLATE CAKE</a></li>
+                <li><a href="https://www.joyofbaking.com/cakes/SimpleChocolateCake.html" target="_blank">SIMPLE CHOCOLATE CAKE</a></li>
+                <li><a href="https://www.foodnetwork.com/recipes/food-network-kitchen/basic-chocolate-cake-recipe-2120876" target="_blank">BASIC CHOCOLATE CAKE</a></li>
+                <li><a href="https://cafedelites.com/best-fudgy-chocolate-cake/" target="_blank">FUDGY CHOCOLATE CAKE</a></li>
+                <li><a href="https://thestayathomechef.com/the-most-amazing-chocolate-cake/" target="_blank">CLASSIC CHOCOLATE CAKE</a></li>
+            </ul>
+        </section>
+    
+    </main>
+    <footer class="footer">
+        <p>
+            &copy; Ambarish - CSS ref:  <a href="https://www.w3schools.com/css/" target="_blank">w3schools</a>
+        </p>
+    </footer>
+
+</body>
+</html>
